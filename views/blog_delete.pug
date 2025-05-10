@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 #{blog.name}
+
+    dt
+      a(href=blog.url)
+
+    h2 Do you really want to delete this Page?
+    
+    img(src="/images/boots.jpg" width='700' height='400')
+
+    form(method='POST' action='')
+      div.form-group
+        input#blogid.form-control(type='hidden',name='blogid', required='true', value=blog._id )
+
+      button.btn.btn-primary(type='submit') Delete

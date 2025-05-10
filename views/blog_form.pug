@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1=title
+
+  hr
+  form(method='POST' action='')
+    div.form-group
+      label(for='takeDate') TakeDate:
+      input#takeDate.form-control(type='text', placeholder='Take Date' name='takeDate' required='true' value=(undefined===blog ? '' : blog.takeDate))
+    div.form-group
+      label(for='title') Title:
+      input#title.form-control(type='text', placeholder='Title' name='title' value=(undefined===blog ? '' : blog.title) required='true')
+    div.form-group
+      label(for='f') F:
+      input#f.form-control(type='text', placeholder='F' name='f' value=(undefined===blog ? '' : blog.f) required='true')
+    div.form-group
+      label(for='shutterSpeed') ShutterSpeed:
+      input#shutterSpeed.form-control(type='text', placeholder='ShutterSpeed' name='shutterSpeed' value=(undefined===blog ? '' : blog.shutterSpeed) required='true')
+    div.form-group
+      label(for='ISO') ISO:
+      input#ISO.form-control(type='text', placeholder='ISO' name='ISO' value=(undefined===blog ? '' : blog.ISO) required='true')
+
+    button.btn.btn-primary(type='submit') Submit
+
+  if errors
+    ul
+      for error in errors
+        li!= error.msg

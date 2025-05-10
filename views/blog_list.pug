@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 #Here are some Tips for you!
+  
+  hr
+  ul
+    - blog_list.sort(function(a, b) {let textA = a.takeDate.toUpperCase(); let textB = b.takeDate.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+    each blog in blog_list
+      li
+        h2  
+          a(href=blog.url) #{blog.takeDate}

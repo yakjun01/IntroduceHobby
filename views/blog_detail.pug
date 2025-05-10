@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 #Thanks for your Tips
+
+  img(src="/images/insert.jpg" width='600' height='400')
+  hr
+  h2 - TakeDate: #{blog.takeDate}
+  h2 - Title: #{blog.title}
+  h2 - F: #{blog.f}
+  h2 - Shutter Speed: #{blog.shutterSpeed}
+  h2 - ISO: #{blog.ISO}
+
+  hr
+  p
+    a(href=blog.url+'/update') Update Tips
+  p
+    a(href=blog.url+'/delete') Delete Tips

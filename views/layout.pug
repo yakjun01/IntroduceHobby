@@ -1,0 +1,26 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js')
+  link(rel='stylesheet', href='/stylesheets/style.css')
+
+nav.navbar.navbar-expand-sm.navbar-light(style='background-color: #c7e7e5;').justify-content-between.fix-top
+  ul.navbar-nav
+    a.navbar-brand(href='/catalog') 
+      h2 Home
+    li.nav-item
+      a.nav-link(href='/catalog/blogs')  
+        h3 Tips
+    li.nav-item
+      a.nav-link(href='/example')  
+        h3 Examples
+    li.nav-item
+      a.nav-link(href='/catalog/blog/create')
+        h3 Create New Tips
+
+
+block content
